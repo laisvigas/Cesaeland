@@ -1,9 +1,15 @@
 package Cesaeland.Views;
 
+import Cesaeland.Controllers.EngenheiroController;
 import java.util.Scanner;
 
 public class MenuEngenheiroView {
     private Scanner scanner = new Scanner(System.in);
+    private EngenheiroController engenheiroController;
+
+    public MenuEngenheiroView(EngenheiroController engenheiroController) {
+        this.engenheiroController = engenheiroController;
+    }
 
     public void executarMenuEngenheiro() {
         int opcao;
@@ -18,19 +24,14 @@ public class MenuEngenheiroView {
 
             switch (opcao) {
                 case 1:
-                    System.out.println("[FUNCIONALIDADE] Próximas revisões (TOP 3)");
-                    // Chamar controlador
+                    engenheiroController.consultarProximasRevisoes();
                     break;
-
                 case 2:
-                    System.out.println("[FUNCIONALIDADE] Histórico de revisões (TOP 3)");
-                    // Chamar controlador
+                    engenheiroController.consultarHistoricoRevisoes();
                     break;
-
                 case 0:
                     System.out.println("A sair do menu Engenheiro...");
                     break;
-
                 default:
                     System.out.println("Opção inválida.");
             }

@@ -1,9 +1,17 @@
 package Cesaeland.Views;
 
+import Cesaeland.Controllers.ClientController;
+import Cesaeland.Controllers.EngenheiroController;
+import Cesaeland.Controllers.AdminController;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class MenuLoginView {
     private Scanner scanner = new Scanner(System.in);
+
+    // Example: these would be loaded from files in your real application
+    private ArrayList atracoes = new ArrayList<>();
+    private ArrayList vendas = new ArrayList<>();
 
     public int mostrarMenuLogin() {
         System.out.println("\n===== CESAELAND LOGIN =====");
@@ -34,15 +42,27 @@ public class MenuLoginView {
             switch (opcao) {
                 case 1:
                     System.out.println("[LOGIN] A entrar como Cliente (sem autenticação)...");
-                    // Chamar menu do Cliente
+                    ClientController clientController = new ClientController(atracoes);
+                    MenuClienteView menuCliente = new MenuClienteView(clientController);
+                    menuCliente.executarMenuCliente();
                     break;
                 case 2:
                     System.out.println("[LOGIN] Engenheiro selecionado.");
-                    // Fazer autenticação
+                    String userEng = lerUsername();
+                    String passEng = lerPassword();
+                    // TODO: Authenticate engineer using userEng and passEng
+                    EngenheiroController engController = new EngenheiroController();
+                    MenuEngenheiroView menuEng = new MenuEngenheiroView(engController);
+                    menuEng.executarMenuEngenheiro();
                     break;
                 case 3:
                     System.out.println("[LOGIN] Administrador selecionado.");
-                    // Fazer autenticação
+                    String userAdmin = lerUsername();
+                    String passAdmin = lerPassword();
+                    // TODO: Authenticate admin using userAdmin and passAdmin
+                    AdminController adminController = new AdminController(atracoes, vendas);
+                    MenuAdminView menuAdmin = new MenuAdminView(adminController);
+                    menuAdmin.executarMenuAdmin();
                     break;
                 case 0:
                     System.out.println("A sair da aplicação...");

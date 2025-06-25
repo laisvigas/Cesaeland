@@ -1,6 +1,5 @@
 package Cesaeland.Views;
 
-import Cesaeland.Controllers.AdminController;
 import java.util.Scanner;
 
 public class MenuAdminView {
