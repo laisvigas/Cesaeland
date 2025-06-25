@@ -21,7 +21,7 @@ public class MenuEngenheiroView {
                     System.out.println("[FUNCIONALIDADE] Próximas revisões (TOP 3)");
                     // Chamar controlador
                     break;
-                    
+
                 case 2:
                     System.out.println("[FUNCIONALIDADE] Histórico de revisões (TOP 3)");
                     // Chamar controlador
