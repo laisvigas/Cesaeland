@@ -1,15 +1,16 @@
 package Cesaeland.Models;
 
 public class Atracao {
-   private int idAtracao;
-   private String nome;
-   private double precoAdulto;
-   private double precoCrianca;
-   private double duracaoSegundos;
-   private double custoManutencaoBilhete;
-   private double custoFixoMes;
+    private int idAtracao;
+    private String nome;
+    private double precoAdulto;
+    private double precoCrianca;
+    private double duracaoSegundos;
+    private double custoManutencaoBilhete;
+    private double custoFixoMes;
 
-    public Atracao(int idAtracao, String nome, double precoAdulto, double precoCrianca, double duracaoSegundos, double custoManutencaoBilhete, double custoFixoMes) {
+    public Atracao(int idAtracao, String nome, double precoAdulto, double precoCrianca,
+                   double duracaoSegundos, double custoManutencaoBilhete, double custoFixoMes) {
         this.idAtracao = idAtracao;
         this.nome = nome;
         this.precoAdulto = precoAdulto;
@@ -45,5 +46,18 @@ public class Atracao {
 
     public double getCustoFixoMes() {
         return custoFixoMes;
+    }
+
+    @Override
+    public String toString() {
+        return "Atracao{" +
+                "idAtracao=" + idAtracao +
+                ", nome='" + nome + '\'' +
+                ", precoAdulto=" + precoAdulto +
+                ", precoCrianca=" + precoCrianca +
+                ", duracaoSegundos=" + duracaoSegundos +
+                ", custoManutencaoBilhete=" + custoManutencaoBilhete +
+                ", custoFixoMes=" + custoFixoMes +
+                '}';
     }
 }

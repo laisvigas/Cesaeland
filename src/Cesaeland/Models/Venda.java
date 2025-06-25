@@ -2,11 +2,11 @@ package Cesaeland.Models;
 
 public class Venda {
     private int idAtracao;
-    private int data;
+    private int data; // MM/AAAA
     private String tipoCliente;
 
     public Venda(int idAtracao, int data, String tipoCliente) {
-        this.idAtracao = atracao;
+        this.idAtracao = idAtracao;
         this.data = data;
         this.tipoCliente = tipoCliente;
     }
