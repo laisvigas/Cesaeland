@@ -24,4 +24,33 @@ public class MenuLoginView {
         System.out.print("Password: ");
         return scanner.next();
     }
+
+    public void executarMenuLogin() {
+        int opcao;
+
+        do {
+            opcao = mostrarMenuLogin();
+
+            switch (opcao) {
+                case 1:
+                    System.out.println("[LOGIN] A entrar como Cliente (sem autenticação)...");
+                    // Chamar menu do Cliente
+                    break;
+                case 2:
+                    System.out.println("[LOGIN] Engenheiro selecionado.");
+                    // Fazer autenticação
+                    break;
+                case 3:
+                    System.out.println("[LOGIN] Administrador selecionado.");
+                    // Fazer autenticação
+                    break;
+                case 0:
+                    System.out.println("A sair da aplicação...");
+                    break;
+                default:
+                    System.out.println("Opção inválida. Tente novamente.");
+            }
+
+        } while (opcao != 0);
+    }
 }
