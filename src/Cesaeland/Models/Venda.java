@@ -6,7 +6,7 @@ public class Venda {
     private String tipoCliente;
 
     public Venda(int idAtracao, int data, String tipoCliente) {
-        this.idAtracao = atracao;
+        this.idAtracao = idAtracao;
         this.data = data;
         this.tipoCliente = tipoCliente;
     }
