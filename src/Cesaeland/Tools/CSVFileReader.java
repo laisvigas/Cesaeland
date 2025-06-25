@@ -17,20 +17,18 @@ public class CSVFileReader {
         File atracoessFile = new File(filePath1);
         Scanner atracoessScanner = new Scanner(atracoessFile);
 
-        // Criamos o ArrayList de Vendas, vazio
+        // Criamos o ArrayList de Atracoes, vazio
         ArrayList<Atracao> atracoessArray = new ArrayList<>();
 
-        // Avançar o cabeçalho
+        // Avançar o cabeçalho do ficheiro 1
         atracoessScanner.nextLine();
 
-        // Abrimos o ficheiro e criamos um Scanner associado
+        // Abrimos o ficheiro 2 e criamos um Scanner associado
         File atracoessFile2 = new File(filePath2);
         Scanner atracoessScanner2 = new Scanner(atracoessFile2);
 
-        // Criamos o ArrayList de Vendas, vazio
-        ArrayList<Atracao> atracoessArray2 = new ArrayList<>();
 
-        // Avançar o cabeçalho
+        // Avançar o cabeçalho do ficheiro 2
         atracoessScanner2.nextLine();
 
         // Ciclo que vai correr para cada linha do ficheiro
