@@ -1,9 +1,16 @@
 package Cesaeland.Views;
 
+import Cesaeland.Controllers.ClientController;
 import java.util.Scanner;
 
 public class MenuClienteView {
     private Scanner scanner = new Scanner(System.in);
+    private ClientController clientController;
+
+    // Constructor receives the controller
+    public MenuClienteView(ClientController clientController) {
+        this.clientController = clientController;
+    }
 
     public void executarMenuCliente() {
         int opcao;
@@ -18,17 +25,14 @@ public class MenuClienteView {
 
             switch (opcao) {
                 case 1:
-                    System.out.println("[FUNCIONALIDADE] Listar atrações disponíveis");
+                    clientController.listarAtracoesDisponiveis();
                     break;
-
                 case 2:
-                    System.out.println("[FUNCIONALIDADE] Atrações favoritas por tipo de cliente");
+                    clientController.listarAtracoesFavoritas();
                     break;
-
                 case 0:
                     System.out.println("A sair do menu Cliente...");
                     break;
-
                 default:
                     System.out.println("Opção inválida. Tente novamente.");
             }
