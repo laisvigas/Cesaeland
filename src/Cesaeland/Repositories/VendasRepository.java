@@ -10,7 +10,7 @@ public class VendasRepository {
 
     private ArrayList<Venda> vendasArray;
 
-    public VendasRepository(ArrayList<Venda> vendasArray) throws FileNotFoundException {
+    public VendasRepository() throws FileNotFoundException {
 
         CSVFileReader csvFR = new CSVFileReader();
 
